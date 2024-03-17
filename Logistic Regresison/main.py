@@ -2,7 +2,8 @@
 import pandas as pd
 from data_cleaning import load_dataset
 from data_sampling import sample_data
-from model_training import train_model
+
+from model_training import train_model, train_modelRFE
 from metrics_evaluation import evaluate_metrics
 from visualisation import plot_confusion_matrix, plot_metrics_bar_chart
 
@@ -10,9 +11,12 @@ from visualisation import plot_confusion_matrix, plot_metrics_bar_chart
 df = load_dataset('Dataset/feature_output_10k_final.csv', [0, 1, 2, 4, 5, 14])
 
 # Sample the data
-df_sample = sample_data(df,n=1000,random_state=28)
-
+# df_sample = sample_data(df,n=1000,random_state=28)
+df_sample = df
 # print(len(df_sample))
+
+# optionally perform RFE
+
 
 # Select features and labels
 y = df_sample.iloc[:, 0]  # First column is y
