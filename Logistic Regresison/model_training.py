@@ -67,7 +67,7 @@ def train_model(X, y, test_size=0.2, random_state=28):
     print("Best Hyperparameters:", best_params)
 
     # Train a logistic regression model with the best hyperparameters
-    best_log_reg_model = LogisticRegression(**best_params)
+    best_log_reg_model = LogisticRegression(**best_params,random_state=28)
     best_log_reg_model.fit(X_train_scaled, y_train)
 
     return best_log_reg_model, X_test_scaled, y_test
@@ -105,7 +105,7 @@ def train_model_rob(X, y, test_size=0.2, random_state=28):
     print("Best Hyperparameters:", best_params)
 
     # Train a logistic regression model with the best hyperparameters
-    best_log_reg_model = LogisticRegression(**best_params)
+    best_log_reg_model = LogisticRegression(**best_params,random_state=28)
     best_log_reg_model.fit(X_train_scaled, y_train)
 
     return best_log_reg_model, X_test_scaled, y_test

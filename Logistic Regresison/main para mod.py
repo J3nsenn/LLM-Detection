@@ -1,6 +1,6 @@
 # main.py
 import pandas as pd
-from data_cleaning import load_dataset
+from data_cleaning import load_dataset_mod
 from data_sampling import sample_data
 from model_training import train_model
 from metrics_evaluation import evaluate_metrics
@@ -8,9 +8,9 @@ from visualisation import plot_confusion_matrix, plot_metrics_bar_chart
 import matplotlib.pyplot as plt
 
 # Load the dataset
-df = load_dataset('Dataset/feature_output_10k_final.csv')
+df = load_dataset_mod('Dataset/feature_output_10k_final.csv')
 
-test_df = load_dataset('Paraphrase/ai_human_with_features.csv')
+test_df = load_dataset_mod('Paraphrase/ai_human_with_features.csv')
 
 # Sample the data
 # df_sample = sample_data(df,n=1000,random_state=28)
